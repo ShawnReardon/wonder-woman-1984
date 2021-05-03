@@ -54,10 +54,10 @@ for (let index = 0; index <= 4; index++) {
         `, SpriteKind.Enemy)
     tiles.placeOnRandomTile(evilGuy, sprites.swamp.swampTile16)
 }
-game.onUpdateInterval(500, function () {
+game.onUpdateInterval(100, function () {
     for (let value of sprites.allOfKind(SpriteKind.Enemy)) {
-        if (mySprite.x - value.x < 1 && mySprite.y - value.y < 1) {
-            value.follow(mySprite, 100)
+        if (mySprite.x - value.x < 5 && mySprite.y - value.y < 5) {
+            value.follow(mySprite, randint(50, 150))
         } else {
         	
         }
